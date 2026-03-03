@@ -1,0 +1,20 @@
+{
+  "description": "IT QA Monitor — RSS feed list for AI, QA, and testing. Used as reference; app loads feeds from src/config/feeds.ts (ITQA_FEEDS).",
+  "feeds": [
+    { "url": "https://blog.google/technology/ai/rss/", "category": "ai", "locale": "en", "tier": 1, "name": "Google AI Blog" },
+    { "url": "https://openai.com/blog/rss", "category": "ai", "locale": "en", "tier": 1, "name": "OpenAI Blog" },
+    { "url": "https://feeds.arxiv.org/rss/cs.AI", "category": "ai", "locale": "en", "tier": 2, "name": "arXiv AI" },
+    { "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/", "category": "ai", "locale": "en", "tier": 2, "name": "MIT Tech Review AI" },
+    { "url": "https://towardsdatascience.com/feed/tag/artificial-intelligence", "category": "ai", "locale": "en", "tier": 3, "name": "Towards Data Science AI" },
+    { "url": "https://www.softwaretestinghelp.com/feed/", "category": "qa", "locale": "en", "tier": 2, "name": "Software Testing Help" },
+    { "url": "https://www.guru99.com/feed", "category": "qa", "locale": "en", "tier": 3, "name": "Guru99" },
+    { "url": "https://www.browserstack.com/blog/feed/", "category": "qa", "locale": "en", "tier": 2, "name": "BrowserStack Blog" },
+    { "url": "https://ministryoftesting.com/rss", "category": "testing", "locale": "en", "tier": 2, "name": "Ministry of Testing" },
+    { "url": "https://www.applitools.com/blog/feed/", "category": "testing", "locale": "en", "tier": 2, "name": "Applitools Blog" },
+    { "url": "https://saucelabs.com/resources/blog/rss", "category": "testing", "locale": "en", "tier": 2, "name": "Sauce Labs Blog" },
+    { "url": "https://www.perfecto.io/blog/rss", "category": "testing", "locale": "en", "tier": 3, "name": "Perfecto Blog" },
+    { "url": "https://www.lambdatest.com/blog/feed/", "category": "testing", "locale": "en", "tier": 2, "name": "LambdaTest Blog" },
+    { "url": "https://news.ycombinator.com/rss", "category": "tech", "locale": "en", "tier": 4, "name": "Hacker News" },
+    { "url": "https://techcrunch.com/tag/artificial-intelligence/feed/", "category": "tech", "locale": "en", "tier": 2, "name": "TechCrunch AI" }
+  ]
+}
