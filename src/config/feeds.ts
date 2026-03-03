@@ -294,6 +294,28 @@ export const SOURCE_TIERS: Record<string, number> = {
   'GNN Animals': 3,
   'GNN Health': 3,
   'GNN Heroes': 3,
+
+    // Java & Development Feeds
+    'Baeldung': 3,
+    'Java Code Geeks': 3,
+    'InfoQ Java': 3,
+    'DZone Java': 3,
+    'Oracle Java Blog': 2,
+    'The Java Specialist': 3,
+    'Vlad Mihalcea (Hibernate)': 3,
+    'Spring Blog': 2,
+    'Thorben Janssen (JPA/Hibernate)': 3,
+    'Marco Behler': 3,
+    'Reflectoring': 3,
+    'Baeldung Kotlin': 3,
+    'JUnit Blog': 2,
+    'Testcontainers': 2,
+    'Selenium Blog': 2,
+    'Mockito': 2,
+    'AssertJ': 3,
+    'OWASP Blog': 2,
+    'Snyk Blog': 2,
+
 };
 
 export function getSourceTier(sourceName: string): number {
@@ -380,6 +402,28 @@ export const SOURCE_TYPES: Record<string, SourceType> = {
   'This Week in Startups': 'tech', 'The Twenty Minute VC': 'tech',
   'Hard Fork (NYT)': 'tech', 'Pivot (Vox)': 'tech', 'Stratechery': 'tech',
   'Benedict Evans': 'tech', 'How I Built This': 'tech', 'Masters of Scale': 'tech',
+
+  // Java & Development Feeds
+  'Baeldung': 'tech',
+  'Java Code Geeks': 'tech',
+  'InfoQ Java': 'tech',
+  'DZone Java': 'tech',
+  'Oracle Java Blog': 'tech',
+  'The Java Specialist': 'tech',
+  'Vlad Mihalcea (Hibernate)': 'tech',
+  'Spring Blog': 'tech',
+  'Thorben Janssen (JPA/Hibernate)': 'tech',
+  'Marco Behler': 'tech',
+  'Reflectoring': 'tech',
+  'Baeldung Kotlin': 'tech',
+  'JUnit Blog': 'tech',
+  'Testcontainers': 'tech',
+  'Selenium Blog': 'tech',
+  'Mockito': 'tech',
+  'AssertJ': 'tech',
+  'OWASP Blog': 'tech',
+  'Snyk Blog': 'tech',
+
 };
 
 export function getSourceType(sourceName: string): SourceType {
@@ -1056,6 +1100,7 @@ const HAPPY_FEEDS: Record<string, Feed[]> = {
 };
 
 // IT QA variant — AI developments, QA updates, testing methodologies
+// IT QA variant — AI developments, QA updates, testing methodologies, Java development
 const ITQA_FEEDS: Record<string, Feed[]> = {
   ai: [
     { name: 'Google AI Blog', url: rss('https://blog.google/technology/ai/rss/') },
@@ -1070,6 +1115,27 @@ const ITQA_FEEDS: Record<string, Feed[]> = {
     { name: 'Software Testing Help', url: rss('https://www.softwaretestinghelp.com/feed/') },
     { name: 'Guru99', url: rss('https://www.guru99.com/feed') },
     { name: 'BrowserStack Blog', url: rss('https://www.browserstack.com/blog/feed/') },
+
+        // Java Development Feeds
+        { name: 'Baeldung', url: rss('https://www.baeldung.com/feed') },
+        { name: 'Java Code Geeks', url: rss('https://www.javacodegeeks.com/feed') },
+        { name: 'InfoQ Java', url: rss('https://feed.infoq.com/java/') },
+        { name: 'DZone Java', url: rss('https://dzone.com/java-jdk-development-tutorials-tools-news/feed') },
+        { name: 'Oracle Java Blog', url: rss('https://blogs.oracle.com/java/feed') },
+        { name: 'The Java Specialist', url: rss('https://www.javaspecialists.eu/archive/feed.xml') },
+        { name: 'Vlad Mihalcea (Hibernate)', url: rss('https://vladmihalcea.com/feed/') },
+        { name: 'Spring Blog', url: rss('https://spring.io/blog/feed.atom') },
+        { name: 'Thorben Janssen (JPA/Hibernate)', url: rss('https://thorben-janssen.com/feed/') },
+        { name: 'Marco Behler', url: rss('https://www.marcobehler.com/feed') },
+        { name: 'Reflectoring', url: rss('https://reflectoring.io/feed.xml') },
+        { name: 'Baeldung Kotlin', url: rss('https://www.baeldung.com/kotlin/feed') },
+
+    // Testing & QA with Java focus
+    { name: 'JUnit Blog', url: rss('https://junit.org/junit5/blog/feed.xml') },
+    { name: 'Testcontainers', url: rss('https://www.testcontainers.org/news/feed.xml') },
+    { name: 'Selenium Blog', url: rss('https://www.selenium.dev/blog/atom.xml') },
+    { name: 'Mockito', url: rss('https://github.com/mockito/mockito/releases.atom') },
+    { name: 'AssertJ', url: rss('https://assertj.github.io/feed.xml') },
   ],
   testing: [
     { name: 'Ministry of Testing', url: rss('https://ministryoftesting.com/rss') },
@@ -1077,6 +1143,8 @@ const ITQA_FEEDS: Record<string, Feed[]> = {
     { name: 'Sauce Labs Blog', url: rss('https://saucelabs.com/resources/blog/rss') },
     { name: 'Perfecto Blog', url: rss('https://www.perfecto.io/blog/rss') },
     { name: 'LambdaTest Blog', url: rss('https://www.lambdatest.com/blog/feed/') },
+    { name: 'Cypress.io', url: rss('https://www.cypress.io/blog/feed.xml') },
+    { name: 'Playwright', url: rss('https://playwright.dev/blog/feed.xml') },
   ],
   tech: [
     { name: 'Hacker News', url: rss('https://news.ycombinator.com/rss') },
@@ -1085,11 +1153,14 @@ const ITQA_FEEDS: Record<string, Feed[]> = {
     { name: 'The Verge', url: rss('https://www.theverge.com/rss/index.xml') },
     { name: 'Ars Technica', url: rss('https://feeds.arstechnica.com/arstechnica/technology-lab') },
     { name: 'MIT Tech Review', url: rss('https://www.technologyreview.com/feed/') },
+    { name: 'InfoQ', url: rss('https://feed.infoq.com/') },
   ],
   security: [
     { name: 'The Hacker News', url: rss('https://feeds.feedburner.com/TheHackersNews') },
     { name: 'Krebs Security', url: rss('https://krebsonsecurity.com/feed/') },
     { name: 'CISA Advisories', url: rss('https://www.cisa.gov/cybersecurity-advisories/all.xml') },
+    { name: 'OWASP Blog', url: rss('https://owasp.org/blog/feed.xml') },
+    { name: 'Snyk Blog', url: rss('https://snyk.io/blog/feed/') },
   ],
 };
 
