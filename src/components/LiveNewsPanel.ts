@@ -1,5 +1,4 @@
-import { FEEDS } from '@/config/feeds';
-import { SITE_VARIANT } from '@/config';
+
 import { Panel } from './Panel';
 import { fetchLiveVideoInfo } from '@/services/live-news';
 import { isDesktopRuntime, getRemoteApiBaseUrl, getApiBaseUrl, getLocalApiPort } from '@/services/runtime';
@@ -8,25 +7,7 @@ import { loadFromStorage, saveToStorage } from '@/utils';
 import { STORAGE_KEYS, SITE_VARIANT } from '@/config';
 import { getStreamQuality } from '@/services/ai-flow-settings';
 
-export function LiveNewsPanel() {
-  const feeds =
-    SITE_VARIANT === 'itqa'
-      ? FEEDS.qa
-      : FEEDS.prod;   // or whatever your other key is
 
-  console.log('LiveNewsPanel feeds:', feeds);
-
-  return (
-    <div>
-      {feeds.map((feed) => (
-        <div key={feed.name}>
-          <h4>{feed.name}</h4>
-          <p>{feed.url}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 // YouTube IFrame Player API types
 type YouTubePlayer = {
   mute(): void;
