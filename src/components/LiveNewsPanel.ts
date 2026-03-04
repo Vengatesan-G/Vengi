@@ -8,18 +8,17 @@ import { loadFromStorage, saveToStorage } from '@/utils';
 import { STORAGE_KEYS, SITE_VARIANT } from '@/config';
 import { getStreamQuality } from '@/services/ai-flow-settings';
 
-// compound function
 export function LiveNewsPanel() {
-  // Step 2: safely pick feeds based on SITE_VARIANT
-  const feeds = SITE_VARIANT === 'itqa' ? FEEDS.qa : FEEDS;
+  const feeds =
+    SITE_VARIANT === 'itqa'
+      ? FEEDS.qa
+      : FEEDS.prod;   // or whatever your other key is
 
-  // Debug: check what feeds are loaded
   console.log('LiveNewsPanel feeds:', feeds);
 
   return (
     <div>
-      {/* Render each feed */}
-      {feeds.map(feed => (
+      {feeds.map((feed) => (
         <div key={feed.name}>
           <h4>{feed.name}</h4>
           <p>{feed.url}</p>
