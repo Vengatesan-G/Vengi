@@ -18,8 +18,8 @@ export function LiveNewsPanel() {
 
   return (
     <div>
-      {/* Example rendering */}
-      {feeds.qa?.map(feed => (
+      {/* Render each feed */}
+      {feeds.map(feed => (
         <div key={feed.name}>
           <h4>{feed.name}</h4>
           <p>{feed.url}</p>
@@ -28,7 +28,6 @@ export function LiveNewsPanel() {
     </div>
   );
 }
-
 // YouTube IFrame Player API types
 type YouTubePlayer = {
   mute(): void;
