@@ -359,13 +359,13 @@ export default async function handler(req) {
     });
   }
 
-  const keyCheck = validateApiKey(req);
-  if (keyCheck.required && !keyCheck.valid) {
-    return new Response(JSON.stringify({ error: keyCheck.error }), {
-      status: 401,
-      headers: { 'Content-Type': 'application/json', ...corsHeaders },
-    });
-  }
+//  const keyCheck = validateApiKey(req);
+//  if (keyCheck.required && !keyCheck.valid) {
+//    return new Response(JSON.stringify({ error: keyCheck.error }), {
+//      status: 401,
+//      headers: { 'Content-Type': 'application/json', ...corsHeaders },
+//    });
+//  }
 
   const rateLimitResponse = await checkRateLimit(req, corsHeaders);
   if (rateLimitResponse) return rateLimitResponse;
