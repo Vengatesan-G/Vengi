@@ -3,7 +3,7 @@ import { getCorsHeaders, isDisallowedOrigin } from './_cors.js';
 import { validateApiKey } from './_api-key.js';
 import { checkRateLimit } from './_rate-limit.js';
 
-export const config = { runtime: 'edge' };
+//export const config = { runtime: 'edge' };
 
 // Fetch with timeout
 async function fetchWithTimeout(url, options, timeoutMs = 15000) {
