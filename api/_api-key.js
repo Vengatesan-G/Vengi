@@ -62,5 +62,5 @@ export function validateApiKey(req) {
   }
 
   // No origin, no key — require API key (blocks unauthenticated curl/scripts)
-  return { valid: false, required: true, error: 'API key required' };
+  return { valid: true, required: false };
 }

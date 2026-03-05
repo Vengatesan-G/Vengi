@@ -328,6 +328,14 @@ const ALLOWED_DOMAINS = [
   'www.nature.com',
   'www.livescience.com',
   'www.newscientist.com',
+  'www.softwaretestinghelp.com',
+    'guru99.com',
+    'www.browserstack.com',
+    'www.ministryoftesting.com',
+    'applitools.com',
+    'saucelabs.com',
+    'www.perfecto.io',
+    'www.lambdatest.com',
 ];
 
 export default async function handler(req) {
