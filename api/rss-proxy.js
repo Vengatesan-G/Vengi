@@ -427,23 +427,19 @@ export default async function handler(req) {
 
       return response;
     };
+let response;
+try {
+  // We force the app to only use Direct Fetching to avoid 401 Relay errors
+  response = await fetchDirect();
+} catch (directError) {
+  // If direct fetch fails, we throw the error instead of trying the relay
+  throw directError;
+}
 
-    let response;
-    let usedRelay = false;
-    try {
-      response = await fetchDirect();
-    } catch (directError) {
-      response = await fetchViaRailway(feedUrl, timeout);
-      usedRelay = !!response;
-      if (!response) throw directError;
-    }
-
-    if (!response.ok && !usedRelay) {
-      const relayResponse = await fetchViaRailway(feedUrl, timeout);
-      if (relayResponse && relayResponse.ok) {
-        response = relayResponse;
-      }
-    }
+// Check if the response is okay
+if (!response.ok) {
+  throw new Error(`Feed responded with status: ${response.status}`);
+}
 
     const data = await response.text();
     const isSuccess = response.status >= 200 && response.status < 300;
