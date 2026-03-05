@@ -500,6 +500,16 @@ export function getSourcePanelId(sourceName: string): string {
 }
 
 const FULL_FEEDS: Record<string, Feed[]> = {
+
+
+      itqa: [
+        { name: 'Baeldung', url: rss('https://www.baeldung.com/feed') },
+        { name: 'Java Code Geeks', url: rss('https://feeds.feedburner.com/JavaCodeGeeks') },
+        { name: 'Ministry of Testing', url: rss('https://www.ministryoftesting.com/dojo/feed') },
+        { name: 'Selenium Blog', url: rss('https://www.selenium.dev/blog/index.xml') },
+        { name: 'Software Testing Help', url: rss('https://www.softwaretestinghelp.com/feed/') },
+        { name: 'Guru99', url: rss('https://www.guru99.com/feed') }
+      ],
   politics: [
     { name: 'BBC World', url: rss('https://feeds.bbci.co.uk/news/world/rss.xml') },
     { name: 'Guardian World', url: rss('https://www.theguardian.com/world/rss') },
@@ -1171,9 +1181,9 @@ export const FEEDS = SITE_VARIANT === 'tech'
     ? FINANCE_FEEDS
     : SITE_VARIANT === 'happy'
       ? HAPPY_FEEDS
-      : SITE_VARIANT === 'itqa'
-        ? ITQA_FEEDS
-        : FULL_FEEDS;
+      : SITE_VARIANT === 'itqa' ? ITQA_FEEDS : FULL_FEEDS;
+
+
 
 export const SOURCE_REGION_MAP: Record<string, { labelKey: string; feedKeys: string[] }> = {
   // Full (geopolitical) variant regions
